@@ -1,1 +1,53 @@
 @import "tailwindcss";
+
+@font-face {  
+  font-family: Epilogue;
+  font-style: normal;  
+  font-weight: 700;  
+  font-display: swap;
+  src: url("/fonts/epilogue/Epilogue-Bold.ttf") format("ttf");
+}
+
+@font-face {  
+  font-family: Epilogue;
+  font-style: normal;  
+  font-weight: 400;  
+  font-display: swap;
+  src: url("/fonts/epilogue/Epilogue-Regular.ttf") format("ttf");
+}
+
+@font-face {  
+  font-family: Epilogue;
+  font-style: italic;  
+  font-weight: 400;  
+  font-display: swap;
+  src: url("/fonts/epilogue/Epilogue-Italic.ttf") format("ttf");
+}
+
+@font-face {  
+  font-family: Fira Sans;
+  font-style: normal;  
+  font-weight: 400;  
+  font-display: swap;
+  src: url("/fonts/firasans/FiraSans-Regular.ttf") format("ttf");
+}
+
+@font-face {  
+  font-family: Fira Sans;
+  font-style: italic;  
+  font-weight: 400;  
+  font-display: swap;
+  src: url("/fonts/firasans/FiraSans-Italic.ttf") format("ttf");
+}
+
+@theme {  
+  --color-foreground: #111213;  
+  --color-background: #F5F6F7;  
+  --color-muted: #494C50;
+  --color-accent: #0663EF;
+
+  --font-serif: "Epilogue", ui-serif, system-ui, serif;
+  --font-sans: "Fira Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --breakpoint-md: 52rem;
+}
