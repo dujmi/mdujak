@@ -19,9 +19,30 @@ const options: Intl.DateTimeFormatOptions = {
   month: "long",
   day: "numeric",
 };
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: post.data.title,
+  description: post.data.preface,
+  image: "https://example.com/default-image.jpg",
+  author: {
+    "@type": "Person",
+    name: "Mislav Dujak",
+  },
+  publisher: {
+    "@type": "Person",
+    name: "Mislav Dujak",
+  },
+  datePublished: post.data.date,
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": "https://example.com/my-blog-post",
+  },
+};
 ---
 
-<Layout title={post.data.title}>
+<Layout title={post.data.title} description={post.data.preface} schema={schema}>
   <header class="flex flex-col items-center justify-center gap-16 pb-32">
     <hgroup class="flex flex-col items-center">
       <h1 class="text-2xl font-bold font-serif leading-normal">
@@ -48,5 +69,5 @@ const options: Intl.DateTimeFormatOptions = {
   <article class="w-full pt-10 pb-24 *:pb-8 md:text-justify">
     <Content />
   </article>
-  <Footer/>
+  <Footer />
 </Layout>

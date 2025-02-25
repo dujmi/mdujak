@@ -1,7 +1,7 @@
 ---
 import "../styles/global.css";
 
-const { title = "Mislav Dujak" } = Astro.props;
+const { title = "Mislav Dujak", description = "Mislav's blog.", schema = null } = Astro.props;
 ---
 
 <!doctype html>
@@ -12,7 +12,25 @@ const { title = "Mislav Dujak" } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="../src/assets/favicon.jpg" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="generator" content={Astro.generator} />
+
     <title>{title}</title>
+    <meta
+      name="description"
+      content={description}
+    />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content={title} />
+    <meta
+      property="og:description"
+      content={description}
+    />
+    <meta
+      property="og:image"
+      content="https://www.yoursite.com/path/to/image.jpg"
+    />
+    <meta property="og:url" content="https://www.yoursite.com/your-blog-post" />
+
+    {schema && <script type="application/ld+json">{JSON.stringify(schema)}</script>}
 
     <script
       src="https://kit.fontawesome.com/68fab0f1af.js"

@@ -63,33 +63,37 @@ const projects = [
   </header>
   <hr class="w-32 h-px text-separator mx-auto" />
   <main>
-    <ul
-      class="pt-16 pb-32 w-full flex flex-col gap-16 md:grid md:grid-cols-2 md:auto-cols-fr"
-    >
-      {
-        projects.map((project, index) => (
-          <div
-            class={
-              index === projects.length - 1 && projects.length % 2 === 1
-                ? "md:col-span-2 md:mx-auto"
-                : ""
-            }
-          >
-            <Project
-              name={project.name}
-              title={project.title}
-              date={project.date}
-              link={project.link}
+    <section>
+      <ul
+        class="pt-16 pb-32 w-full flex flex-col gap-16 md:grid md:grid-cols-2 md:auto-cols-fr"
+      >
+        {
+          projects.map((project, index) => (
+            <div
+              class={
+                index === projects.length - 1 && projects.length % 2 === 1
+                  ? "md:col-span-2 md:mx-auto"
+                  : ""
+              }
             >
-              <p class="md:text-justify">{project.description}</p>
-            </Project>
-          </div>
-        ))
-      }
-    </ul>
-    <ul class="w-full flex flex-col gap-16 pb-32">
-      {sortedPosts.map((post) => <Post post={post} />)}
-    </ul>
+              <Project
+                name={project.name}
+                title={project.title}
+                date={project.date}
+                link={project.link}
+              >
+                <p class="md:text-justify">{project.description}</p>
+              </Project>
+            </div>
+          ))
+        }
+      </ul>
+    </section>
+    <section>
+      <ul class="w-full flex flex-col gap-16 pb-32">
+        {sortedPosts.map((post) => <Post post={post} />)}
+      </ul>
+    </section>
     <Footer />
   </main>
 </Layout>
