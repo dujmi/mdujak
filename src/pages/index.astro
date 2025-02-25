@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 
 import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
 import Project from "../components/Project.astro";
 import Post from "../components/Post.astro";
 
@@ -93,28 +94,6 @@ const projects = [
     <ul class="w-full flex flex-col gap-16 pb-32">
       {sortedPosts.map((post) => <Post post={post} />)}
     </ul>
-    <footer class="flex flex-row items-center gap-4 justify-center">
-      <p class="text-muted text-sm font-serif text-center">
-        Copyright © {new Date().getFullYear()} Mislav Dujak
-      </p>
-      <div class="flex flex-row items-center gap-2">
-        <a
-          href="https://x.com/mislavdujak"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <i class="fa-brands fa-x-twitter text-muted hover:text-accent text-lg"
-          ></i>
-        </a>
-        <a
-          href="https://github.com/dujmi"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <i class="fa-brands fa-github text-muted hover:text-accent text-lg"
-          ></i>
-        </a>
-      </div>
-    </footer>
+    <Footer />
   </main>
 </Layout>
