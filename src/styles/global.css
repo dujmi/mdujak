@@ -44,10 +44,11 @@
   --color-foreground: #111213;  
   --color-background: #F5F6F7;  
   --color-muted: #494C50;
+  --color-separator: #c9cbcf;
   --color-accent: #0663EF;
 
   --font-serif: "Epilogue", ui-serif, system-ui, serif;
   --font-sans: "Fira Sans", ui-sans-serif, system-ui, sans-serif;
 
-  --breakpoint-md: 52rem;
+  --breakpoint-md: 54rem;
 }

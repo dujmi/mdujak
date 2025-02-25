@@ -1,11 +1,120 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import { getCollection } from "astro:content";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import Project from "../components/Project.astro";
+import Post from "../components/Post.astro";
+
+const posts = await getCollection("blog");
+const sortedPosts = posts.sort((a, b) => {
+  return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
+});
+
+const projects = [
+  {
+    name: "Ofenziva",
+    title: "Journalist",
+    date: "2022-",
+    link: "https://ofenziva.ffa.hr",
+    description:
+      "Uvijek je volio dobru priču, a svoj nepresušan izvor istih pronašao je u sportu. Premda na prvu odaje hladnokrvni dojam računalca, u loptanje se zaljubio zbog utjecaja na ljudsku psihologiju.",
+  },
+  {
+    name: "Ofenziva",
+    title: "Journalist",
+    date: "2022-",
+    link: "https://ofenziva.ffa.hr",
+    description:
+      "Uvijek je volio dobru priču, a svoj nepresušan izvor istih pronašao je u sportu. Premda na prvu odaje hladnokrvni dojam računalca, u loptanje se zaljubio zbog utjecaja na ljudsku psihologiju.",
+  },
+  {
+    name: "Ofenziva",
+    title: "Journalist",
+    date: "2022-",
+    link: "https://ofenziva.ffa.hr",
+    description:
+      "Uvijek je volio dobru priču, a svoj nepresušan izvor istih pronašao je u sportu. Premda na prvu odaje hladnokrvni dojam računalca, u loptanje se zaljubio zbog utjecaja na ljudsku psihologiju.",
+  },
+];
 ---
 
 <Layout>
-	<Welcome />
+  <header>
+    <nav class="flex flex-row items-center justify-left gap-[1.5rem]">
+      <img
+        src="favicon.jpg"
+        alt="Profile Photo"
+        width={64}
+        height={64}
+        class="rounded-full"
+      />
+      <hgroup>
+        <h1 class="font-serif font-bold text-xl leading-6">Mislav Dujak</h1>
+        <p class="font-sans text-muted text-sm leading-5">STUDENT @ CROATIA</p>
+      </hgroup>
+    </nav>
+
+    <p
+      class="w-full md:text-justify text-base font-normal leading-normal pt-8 pb-24"
+    >
+      Uvijek je volio dobru priču, a svoj nepresušan izvor istih pronašao je u
+      sportu. Premda na prvu odaje hladnokrvni dojam računalca, u loptanje se
+      zaljubio zbog utjecaja na ljudsku psihologiju. Nastoji razumjeti postupke
+      sportaša i objasniti ih, često tražeći treću, srednju vrijednost binarnog
+      sustava.
+    </p>
+  </header>
+  <hr class="w-32 h-px text-separator mx-auto" />
+  <main>
+    <ul
+      class="pt-16 pb-32 w-full flex flex-col gap-16 md:grid md:grid-cols-2 md:auto-cols-fr"
+    >
+      {
+        projects.map((project, index) => (
+          <div
+            class={
+              index === projects.length - 1 && projects.length % 2 === 1
+                ? "md:col-span-2 md:mx-auto"
+                : ""
+            }
+          >
+            <Project
+              name={project.name}
+              title={project.title}
+              date={project.date}
+              link={project.link}
+            >
+              <p class="md:text-justify">{project.description}</p>
+            </Project>
+          </div>
+        ))
+      }
+    </ul>
+    <ul class="w-full flex flex-col gap-16 pb-32">
+      {sortedPosts.map((post) => <Post post={post} />)}
+    </ul>
+    <footer class="flex flex-row items-center gap-4 justify-center">
+      <p class="text-muted text-sm font-serif text-center">
+        Copyright © {new Date().getFullYear()} Mislav Dujak
+      </p>
+      <div class="flex flex-row items-center gap-2">
+        <a
+          href="https://x.com/mislavdujak"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <i class="fa-brands fa-x-twitter text-muted hover:text-accent text-lg"
+          ></i>
+        </a>
+        <a
+          href="https://github.com/dujmi"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <i class="fa-brands fa-github text-muted hover:text-accent text-lg"
+          ></i>
+        </a>
+      </div>
+    </footer>
+  </main>
 </Layout>

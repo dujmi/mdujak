@@ -1,0 +1,36 @@
+---
+import type { CollectionEntry } from "astro:content";
+interface Props {
+  post: CollectionEntry<"blog">;
+}
+
+const { post } = Astro.props;
+const options: Intl.DateTimeFormatOptions = {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+---
+
+<li class="flex flex-col items-center">
+  <div class="flex flex-row items-center gap-3 pb-6">
+    <div class="w-16 h-px bg-separator"></div>
+    <p class="text-muted text-sm font-serif">
+      {post.data.date.toLocaleDateString("en-GB", options)}
+    </p>
+    <div class="w-16 h-px bg-separator"></div>
+  </div>
+  <hgroup class="flex flex-col items-center gap-4">
+    <h2>
+      <a
+        href={`/${post.id}`}
+        class="text-xl font-bold font-serif underline underline-offset-6 decoration-dotted decoration-accent leading-snug"
+      >
+        {post.data.title}
+      </a>
+    </h2>
+    <p class="w-full md:text-justify text-base font-normal leading-normal">
+      {post.data.preface}
+    </p>
+  </hgroup>
+</li>

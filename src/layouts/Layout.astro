@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+
+const { title = "Mislav Dujak" } = Astro.props;
 ---
 
 <!doctype html>
@@ -9,19 +11,15 @@ import "../styles/global.css";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.jpg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Mislav Dujak</title>
+    <title>{title}</title>
+
+    <script
+      src="https://kit.fontawesome.com/68fab0f1af.js"
+      crossorigin="anonymous"></script>
   </head>
   <body
-    class="bg-background text-foreground px-2 py-8 md:px-0 md:max-w-3xl md:mx-auto"
+    class="bg-background text-foreground max-w-full min-h-full font-sans px-6 pt-10 pb-10 md:px-0 md:max-w-3xl md:mx-auto"
   >
     <slot />
   </body>
 </html>
-
-<style>
-  html,
-  body {
-    width: 100dvw;
-    height: 100dvh;
-  }
-</style>

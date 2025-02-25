@@ -1,0 +1,29 @@
+---
+const { name, link, title, date } = Astro.props;
+---
+
+<li class="md:max-w-[22rem] flex flex-col gap-4">
+  <div class="flex flex-row items-center justify-between">
+    <hgroup class="flex flex-row items-baseline justify-left gap-4">
+      <p
+        class="text-left text-muted text-sm font-normal leading-normal uppercase"
+      >
+        {title}
+      </p>
+      <h2>
+        <a
+          href={link}
+          rel="noopener noreferrer"
+          target="_blank"
+          class="text-lg font-bold font-serif underline underline-offset-6 decoration-dotted decoration-accent leading-snug"
+        >
+          {name}
+        </a>
+      </h2>
+    </hgroup>
+    <p class="text-right text-muted text-sm">
+      {date}
+    </p>
+  </div>
+  <slot />
+</li>
