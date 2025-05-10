@@ -43,7 +43,7 @@ const schema = {
 ---
 
 <Layout title={post.data.title} description={post.data.preface} schema={schema}>
-  <header class="flex flex-col items-center justify-center gap-12 pb-24">
+  <header class="flex flex-col items-center justify-center gap-10 pb-20">
     <hgroup class="flex flex-col gap-1 items-center">
       <h1 class="text-2xl font-bold font-serif leading-normal">
         {post.data.title}
@@ -66,7 +66,7 @@ const schema = {
     <div class="w-16 h-px bg-separator"></div>
   </div>
   <article
-    class="w-full pt-10 pb-16 text-lg leading-[1.55] *:pb-10 md:text-justify"
+    class="w-full pt-6 pb-16 text-lg leading-[1.55] *:pb-10 md:text-justify"
   >
     <Content />
   </article>
