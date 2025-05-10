@@ -9,7 +9,7 @@ import vercel from "@astrojs/vercel";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://www.my-site.dev",
+  site: "https://mdujak.vercel.app",
   output: "static",
 
   vite: {
