@@ -43,21 +43,20 @@ const schema = {
 ---
 
 <Layout title={post.data.title} description={post.data.preface} schema={schema}>
-  <header class="flex flex-col items-center justify-center gap-16 pb-32">
-    <hgroup class="flex flex-col items-center">
+  <header class="flex flex-col items-center justify-center gap-12 pb-24">
+    <hgroup class="flex flex-col gap-1 items-center">
       <h1 class="text-2xl font-bold font-serif leading-normal">
         {post.data.title}
       </h1>
       <a
         href="/"
-        class="text-lg leading-normal underline underline-offset-6 decoration-dotted decoration-accent"
-        >MISLAV DUJAK</a
+        class="text-base leading-normal underline underline-offset-6 decoration-dotted decoration-accent"
+        >Mislav Dujak</a
       >
     </hgroup>
-    <hgroup class="flex flex-col items-center">
-      <h2 class="font-serif italic pb-2">PREFACE</h2>
-      <p class="md:text-justify text-muted text-lg">{post.data.preface}</p>
-    </hgroup>
+    <p class="md:text-justify italic text-muted text-xl leading-[1.55]">
+      {post.data.preface}
+    </p>
   </header>
   <div class="flex flex-row items-center gap-3 justify-center">
     <div class="w-16 h-px bg-separator"></div>
@@ -66,7 +65,9 @@ const schema = {
     </p>
     <div class="w-16 h-px bg-separator"></div>
   </div>
-  <article class="w-full pt-10 pb-24 text-lg *:pb-10 md:text-justify">
+  <article
+    class="w-full pt-10 pb-16 text-lg leading-[1.55] *:pb-10 md:text-justify"
+  >
     <Content />
   </article>
   <Footer />

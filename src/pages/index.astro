@@ -43,7 +43,7 @@ const projects = [
 
 <Layout>
   <header>
-    <nav class="flex flex-row items-center justify-left gap-[1.5rem]">
+    <nav class="flex flex-row items-center justify-left gap-[1rem]">
       <Image
         src={Favicon}
         alt="Mislav Dujak"
@@ -57,7 +57,7 @@ const projects = [
     </nav>
 
     <p
-      class="w-full md:text-justify text-base font-normal leading-normal pt-8 pb-24"
+      class="w-full md:text-justify text-lg leading-[1.55] font-normal pt-6 pb-20"
     >
       Uvijek je volio dobru priču, a svoj nepresušan izvor istih pronašao je u
       sportu. Premda na prvu odaje hladnokrvni dojam računalca, u loptanje se
@@ -70,7 +70,7 @@ const projects = [
   <main>
     <section>
       <ul
-        class="pt-16 pb-32 w-full flex flex-col gap-16 md:grid md:grid-cols-2 md:auto-cols-fr"
+        class="pt-12 pb-24 w-full flex flex-col gap-16 md:grid md:grid-cols-2 md:auto-cols-fr"
       >
         {
           projects.map((project, index) => (
@@ -87,7 +87,9 @@ const projects = [
                 date={project.date}
                 link={project.link}
               >
-                <p class="md:text-justify">{project.description}</p>
+                <p class="md:text-justify leading-[1.55]">
+                  {project.description}
+                </p>
               </Project>
             </div>
           ))
@@ -95,7 +97,7 @@ const projects = [
       </ul>
     </section>
     <section>
-      <ul class="w-full flex flex-col gap-16 pb-32">
+      <ul class="w-full flex flex-col gap-20 pb-32">
         {sortedPosts.map((post) => <Post post={post} />)}
       </ul>
     </section>
