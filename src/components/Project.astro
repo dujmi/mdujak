@@ -15,9 +15,28 @@ const { name, link, title, date } = Astro.props;
           href={link}
           rel="noopener noreferrer"
           target="_blank"
-          class="text-lg font-bold font-serif underline underline-offset-6 decoration-dotted decoration-2 decoration-md-accent leading-snug"
+          class="flex flex-row gap-1 justify-items-start items-top text-lg font-bold font-serif underline underline-offset-6 decoration-dotted decoration-2 decoration-md-accent leading-snug"
         >
-          {name}
+          <p>
+            {name}
+          </p>
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-square-arrow-out-up-right-icon lucide-square-arrow-out-up-right size-3.5 text-md-muted"
+              ><path
+                d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"
+              ></path><path d="m21 3-9 9"></path><path d="M15 3h6v6"></path>
+            </svg>
+          </span>
         </a>
       </h2>
     </hgroup>
