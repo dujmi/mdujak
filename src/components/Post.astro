@@ -14,17 +14,17 @@ const options: Intl.DateTimeFormatOptions = {
 
 <li class="flex flex-col items-center">
   <div class="flex flex-row items-center gap-3 pb-6">
-    <div class="w-16 h-px bg-separator"></div>
-    <p class="text-muted text-sm font-serif">
+    <div class="w-16 h-px bg-md-separator"></div>
+    <p class="text-md-muted text-sm font-serif">
       {post.data.date.toLocaleDateString("en-GB", options)}
     </p>
-    <div class="w-16 h-px bg-separator"></div>
+    <div class="w-16 h-px bg-md-separator"></div>
   </div>
   <hgroup class="flex flex-col items-center gap-3">
     <h2>
       <a
         href={`/${post.id}`}
-        class="text-xl font-bold font-serif underline underline-offset-6 decoration-dotted decoration-2 decoration-accent leading-snug"
+        class="text-xl font-bold font-serif underline underline-offset-6 decoration-dotted decoration-2 decoration-md-accent leading-snug"
       >
         {post.data.title}
       </a>

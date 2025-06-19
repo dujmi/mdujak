@@ -6,7 +6,7 @@ const { name, link, title, date } = Astro.props;
   <div class="flex flex-row items-center justify-between">
     <hgroup class="flex flex-row items-baseline justify-left gap-4">
       <p
-        class="text-left text-muted text-sm font-normal leading-normal uppercase"
+        class="text-left text-md-muted text-sm font-normal leading-normal uppercase"
       >
         {title}
       </p>
@@ -15,13 +15,13 @@ const { name, link, title, date } = Astro.props;
           href={link}
           rel="noopener noreferrer"
           target="_blank"
-          class="text-lg font-bold font-serif underline underline-offset-6 decoration-dotted decoration-2 decoration-accent leading-snug"
+          class="text-lg font-bold font-serif underline underline-offset-6 decoration-dotted decoration-2 decoration-md-accent leading-snug"
         >
           {name}
         </a>
       </h2>
     </hgroup>
-    <p class="text-right text-muted text-sm">
+    <p class="text-right text-md-muted text-sm">
       {date}
     </p>
   </div>

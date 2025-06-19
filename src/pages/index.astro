@@ -1,12 +1,11 @@
 ---
 import { getCollection } from "astro:content";
-import { Image } from "astro:assets";
 
 import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Project from "../components/Project.astro";
 import Post from "../components/Post.astro";
-import Favicon from "../assets/favicon.jpg";
 
 const posts = await getCollection("blog");
 const sortedPosts = posts.sort((a, b) => {
@@ -17,7 +16,7 @@ const projects = [
   {
     name: "Ofenziva",
     title: "Journalist",
-    date: "2022-",
+    date: "2022-2025",
     link: "https://ofenziva.ffa.hr",
     description:
       "A young, up-and-coming Croatian sports outlet. Led by the motto: The answer to all the questions you have about sports.",
@@ -42,33 +41,8 @@ const projects = [
 ---
 
 <Layout>
-  <header>
-    <nav class="flex flex-row items-center justify-left gap-[1.25rem]">
-      <Image
-        src={Favicon}
-        alt="Mislav Dujak"
-        loading="eager"
-        class="rounded-full w-16 h-16"
-      />
-      <hgroup>
-        <h1 class="font-serif font-bold text-xl leading-6">Mislav Dujak</h1>
-        <p class="font-sans text-muted text-sm leading-5">STUDENT @ CROATIA</p>
-      </hgroup>
-    </nav>
-
-    <p
-      class="w-full text-justify text-lg leading-[1.55] font-normal pt-7 pb-20"
-    >
-      When Lucasfilm lets you down for the <i>nth</i> time (<i>Andor’s</i> the exception),
-      a man’s gotta find his entertainment elsewhere. For me, that became sports.
-      Although this blog leans heavily on numbers, the goal is to explore that space
-      between logic and emotion — where the game truly happens. I can’t promise every
-      pop culture reference will land, or that posts will drop like clockwork, but
-      hey — at least it won’t take as long as <i>Winds of Winter</i> or Everton’s
-      next title.
-    </p>
-  </header>
-  <hr class="w-32 h-px text-separator mx-auto" />
+  <Header />
+  <hr class="w-32 h-px border-md-separator mx-auto" />
   <main>
     <section>
       <ul

@@ -49,20 +49,20 @@ const schema = {
       </h1>
       <a
         href="/"
-        class="text-base leading-normal underline underline-offset-6 decoration-dotted decoration-accent"
+        class="text-base leading-normal underline underline-offset-6 decoration-dotted decoration-md-accent"
         >Mislav Dujak</a
       >
     </hgroup>
-    <p class="text-justify italic text-muted text-xl leading-[1.55]">
+    <p class="text-justify italic text-md-muted text-xl leading-[1.55]">
       {post.data.preface}
     </p>
   </header>
   <div class="flex flex-row items-center gap-3 justify-center">
-    <div class="w-16 h-px bg-separator"></div>
-    <p class="text-muted text-sm font-serif">
+    <div class="w-16 h-px bg-md-separator"></div>
+    <p class="text-md-muted text-sm font-serif">
       {post.data.date.toLocaleDateString("en-GB", options)}
     </p>
-    <div class="w-16 h-px bg-separator"></div>
+    <div class="w-16 h-px bg-md-separator"></div>
   </div>
   <article
     class="w-full pt-6 pb-16 text-lg leading-[1.55] *:pb-10 md:text-justify [&>table]:border-collapse [&>table]:w-full [&>table]:table-auto [&>table]:mb-10 [&>table]:text-left [&_th]:font-serif [&_th]:border-b-1 [&_th]:border-separator"
