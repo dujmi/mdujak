@@ -37,7 +37,7 @@ export default function Share() {
   return (
     <>
       <Toaster offset={{ bottom: "6vh", right: "6vh" }} />
-      <DropdownMenu modal={false} open={dropdownOpen}>
+      <DropdownMenu modal={false}>
         <DropdownMenuTrigger
           asChild
           onClick={() => {

@@ -1,4 +1,5 @@
 ---
+import Header from "@/components/Header.astro";
 import "../styles/global.css";
 
 const { title = "Mislav Dujak", description = "When Lucasfilm lets you down for the nth time (Andor’s the exception), a man’s gotta find his entertainment elsewhere. For me, that became sports. Although this blog leans heavily on numbers, the goal is to explore that space between logic and emotion — where the game truly happens. I can’t promise every pop culture reference will land, or that posts will drop like clockwork, but hey — at least it won’t take as long as Winds of Winter or Everton’s next title.", schema = null } = Astro.props;
@@ -38,6 +39,7 @@ const { title = "Mislav Dujak", description = "When Lucasfilm lets you down for 
   <body
     class="bg-md-bg text-md-fg accent-md-accent w-full min-h-screen font-sans px-5 pt-6 md:pt-7 pb-4 md:px-0 md:max-w-3xl md:mx-auto"
   >
+    <Header></Header>
     <slot />
   </body>
 </html>
