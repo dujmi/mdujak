@@ -1,7 +1,7 @@
 ---
 import { getCollection, render } from "astro:content";
 import Layout from "../layouts/Layout.astro";
-import Footer from "../components/Footer.astro";
+import Nav from "@/components/Nav.astro";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
@@ -24,7 +24,7 @@ const schema = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   headline: post.data.title,
-  description: post.data.preface,
+  description: post.data.description,
   image: "https://example.com/og_image.png",
   author: {
     "@type": "Person",
@@ -38,36 +38,30 @@ const schema = {
 };
 ---
 
-<Layout title={post.data.title} description={post.data.preface} schema={schema}>
-  <header
-    class="flex flex-col items-center justify-center gap-10 pb-20"
-    id="trigger-element"
-  >
-    <hgroup class="flex flex-col gap-1 items-center">
-      <h1 class="text-2xl font-bold font-serif leading-normal">
+<Layout
+  title={post.data.title}
+  description={post.data.description}
+  schema={schema}
+>
+  <Nav subtitle={post.data.date.toLocaleDateString("en-GB", options)} />
+  <header class="pt-14 pb-20">
+    <hgroup class="flex flex-col items-center justify-center gap-2.5">
+      <h1
+        class="text-5xl font-bold font-serif leading-[1.1] text-left md:text-center text-balance"
+      >
         {post.data.title}
       </h1>
-      <a
-        href="/"
-        class="text-base leading-normal underline underline-offset-6 decoration-dotted decoration-md-accent"
-        >Mislav Dujak</a
+      <p
+        class="text-left md:text-center italic text-md-muted text-xl leading-[1.55] md:max-w-2xl text-pretty"
       >
+        {post.data.subtitle}
+      </p>
     </hgroup>
-    <p class="text-justify italic text-md-muted text-xl leading-[1.55]">
-      {post.data.preface}
-    </p>
   </header>
-  <div class="flex flex-row items-center gap-3 justify-center">
-    <div class="w-16 h-px bg-md-separator"></div>
-    <p class="text-md-muted text-sm font-serif">
-      {post.data.date.toLocaleDateString("en-GB", options)}
-    </p>
-    <div class="w-16 h-px bg-md-separator"></div>
-  </div>
+  <hr class="w-32 h-px border-md-separator mx-auto pb-12" />
   <article
-    class="w-full pt-6 pb-16 text-lg leading-[1.55] *:pb-10 md:text-justify [&>table]:border-collapse [&>table]:w-full [&>table]:table-auto [&>table]:mb-10 [&>table]:text-left [&_th]:font-serif [&_th]:border-b-1 [&_th]:border-separator"
+    class="w-full pb-16 text-lg leading-[1.55] *:pb-10 md:text-justify [&>table]:border-collapse [&>table]:w-full [&>table]:table-auto [&>table]:mb-10 [&>table]:text-left [&_th]:font-serif [&_th]:border-b-1 [&_th]:border-separator"
   >
     <Content />
   </article>
-  <Footer />
 </Layout>

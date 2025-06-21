@@ -2,10 +2,9 @@
 import { getCollection } from "astro:content";
 
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
 import Project from "../components/Project.astro";
 import Post from "../components/Post.astro";
+import Nav from "@/components/Nav.astro";
 
 const posts = await getCollection("blog");
 const sortedPosts = posts.sort((a, b) => {
@@ -31,7 +30,7 @@ const projects = [
   },
   {
     name: "UniSport ViLA",
-    title: "PR",
+    title: "Media",
     date: "2025-",
     link: "https://akademija.unisport.hr/",
     description:
@@ -41,7 +40,8 @@ const projects = [
 ---
 
 <Layout>
-  <p class="w-full text-justify text-lg leading-[1.55] font-normal pt-7 pb-20">
+  <Nav />
+  <p class="w-full text-justify text-lg leading-[1.55] font-normal pt-5 pb-20">
     When Lucasfilm lets you down for the <i>nth</i> time (<i>Andor’s</i> the exception),
     a man’s gotta find his entertainment elsewhere. For me, that became sports. Although
     this blog leans heavily on numbers, the goal is to explore that space between
@@ -84,6 +84,5 @@ const projects = [
         {sortedPosts.map((post) => <Post post={post} />)}
       </ul>
     </section>
-    <Footer />
   </main>
 </Layout>

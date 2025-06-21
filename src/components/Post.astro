@@ -13,24 +13,30 @@ const options: Intl.DateTimeFormatOptions = {
 ---
 
 <li class="flex flex-col items-center">
-  <div class="flex flex-row items-center gap-3 pb-6">
+  <div class="flex flex-row items-center gap-3 pb-5">
     <div class="w-16 h-px bg-md-separator"></div>
-    <p class="text-md-muted text-sm font-serif">
+    <p class="text-md-muted text-xs font-serif">
       {post.data.date.toLocaleDateString("en-GB", options)}
     </p>
     <div class="w-16 h-px bg-md-separator"></div>
   </div>
-  <hgroup class="flex flex-col items-center gap-3">
-    <h2>
-      <a
-        href={`/${post.id}`}
-        class="text-xl font-bold font-serif underline underline-offset-6 decoration-dotted decoration-2 decoration-md-accent leading-snug"
-      >
-        {post.data.title}
-      </a>
-    </h2>
-    <p class="w-full md:text-justify text-base font-normal leading-normal">
-      {post.data.preface}
-    </p>
-  </hgroup>
+  <h2
+    class="md:max-w-xl w-full md:text-balance md:text-center text-left text-pretty"
+  >
+    <a
+      href={`/${post.id}`}
+      class="text-2xl font-bold font-serif leading-[1.1] hover:text-md-accent"
+    >
+      {post.data.title}
+    </a>
+  </h2>
+  <ul class="w-full border-x-1 border-md-separator flex flex-col mt-5 md:mt-3">
+    {
+      post.data.tldr.map((excerpt) => (
+        <li class="border-b-1 border-md-separator px-5 py-4.5 w-full text-left md:text-center font-serif text-pretty">
+          {excerpt}
+        </li>
+      ))
+    }
+  </ul>
 </li>

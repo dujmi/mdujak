@@ -1,7 +1,9 @@
 ---
-title: "Monte Carlo Model"
+title: "Get Back or Get Beat: The Pacers’ Title Hopes Ride on It"
+subtitle: "Dinamova desetka prešla je u Como. Može li ispuniti svoj puni potencijal?"
 date: 2025-02-25
-preface: "Santini je ove sezone osvojio 166 duela. To je daleko najviše u ligi i  drugoplasiranom je pobjegao za 32 posto. U zračnim duelima je još  impresivniji: u dosadašnjem dijelu sezone uzeo ih je 109. Prvi napadač  na toj listi je Sandro Kulenović s 50 osvojenih zračnih duela, pa Marko  Livaja s 43"
+description: "Game 7 in sports is inherently exciting. Richard Deitsch and Dan Shanoff sift through the top considerations the NBA and ESPN face."
+tldr: ["Putina pitali ide li svijet prema Trećem svjetskom ratu", "Liječnici: U 24 sata u Gazi ubijeno 140 ljudi", "Marko Livaja MVP HNL sezone 2024./25."]
 ---
 
 Na kraju je Everton do boda u Merseyside derbiju došao golom Jamesa Tarkowskog debelo u sudačkoj nadoknadi, ali ključni potez utakmice dogodio se oko 20. minute kada je David Moyes adaptirao igru svoje momčadi.
