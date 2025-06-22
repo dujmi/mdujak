@@ -44,7 +44,7 @@ export default function Share() {
             setDropdownOpen((val) => !val);
           }}
         >
-          <button className="rounded-full border-1 border-md-separator px-5 py-4 font-sans flex items-baseline justify-center leading-none hover:bg-md-fg hover:text-md-bg hover:border-md-fg transition-colors ease-in-out duration-200 hover:cursor-pointer">
+          <button className="rounded-full border-1 border-md-separator px-5 py-4 font-accent flex items-baseline justify-center leading-none hover:bg-md-fg hover:text-md-bg hover:border-md-fg transition-colors ease-in-out duration-200 hover:cursor-pointer">
             Share
           </button>
         </DropdownMenuTrigger>

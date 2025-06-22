@@ -15,7 +15,7 @@ const options: Intl.DateTimeFormatOptions = {
 <li class="flex flex-col items-center">
   <div class="flex flex-row items-center gap-3 pb-5">
     <div class="w-16 h-px bg-md-separator"></div>
-    <p class="text-md-muted text-xs font-serif">
+    <p class="text-md-muted text-xs font-accent">
       {post.data.date.toLocaleDateString("en-GB", options)}
     </p>
     <div class="w-16 h-px bg-md-separator"></div>
@@ -25,7 +25,7 @@ const options: Intl.DateTimeFormatOptions = {
   >
     <a
       href={`/${post.id}`}
-      class="text-2xl font-bold font-serif leading-[1.1] hover:text-md-accent"
+      class="text-2xl font-bold font-accent leading-[1.1] hover:text-md-accent"
       data-astro-prefetch="viewport"
     >
       {post.data.title}
@@ -34,7 +34,7 @@ const options: Intl.DateTimeFormatOptions = {
   <ul class="w-full border-x-1 border-md-separator flex flex-col mt-5 md:mt-3">
     {
       post.data.tldr.map((excerpt) => (
-        <li class="border-b-1 border-md-separator px-5 py-4.5 w-full text-left md:text-center font-serif text-pretty">
+        <li class="border-b-1 border-md-separator px-5 py-4.5 w-full text-left md:text-center text-pretty">
           {excerpt}
         </li>
       ))

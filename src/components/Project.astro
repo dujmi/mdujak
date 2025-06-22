@@ -2,12 +2,10 @@
 const { name, link, title, date } = Astro.props;
 ---
 
-<li class="md:max-w-[22rem] flex flex-col gap-3">
+<li class="md:max-w-[22rem] flex flex-col gap-1.5">
   <div class="flex flex-row items-center justify-between">
     <hgroup class="flex flex-row items-baseline justify-left gap-2.5">
-      <p
-        class="text-left text-md-muted text-sm font-normal leading-normal uppercase"
-      >
+      <p class="text-left text-md-muted text-sm uppercase font-accent">
         {title}
       </p>
       <h2>
@@ -15,10 +13,10 @@ const { name, link, title, date } = Astro.props;
           href={link}
           rel="noopener noreferrer"
           target="_blank"
-          class="flex flex-row gap-1 justify-items-start items-top text-lg font-bold font-serif underline underline-offset-6 decoration-dotted decoration-2 decoration-md-accent leading-snug"
+          class="flex flex-row gap-1 justify-items-start items-top text-lg font-bold font-accent underline underline-offset-6 decoration-dotted decoration-2 decoration-md-accent leading-snug"
           data-astro-prefetch="hover"
         >
-          <p>
+          <p class="leading-[1.55]">
             {name}
           </p>
           <span>
@@ -41,7 +39,7 @@ const { name, link, title, date } = Astro.props;
         </a>
       </h2>
     </hgroup>
-    <p class="text-right text-md-muted text-sm">
+    <p class="text-right text-md-muted text-xs font-accent">
       {date}
     </p>
   </div>

@@ -54,12 +54,12 @@ const sortedPosts = posts
   <header class="pt-14 pb-20">
     <hgroup class="flex flex-col items-center justify-center gap-2.5">
       <h1
-        class="text-5xl font-bold font-serif leading-[1.1] text-left md:text-center text-balance"
+        class="text-5xl font-bold font-accent leading-[1.1] text-left md:text-center text-balance"
       >
         {post.data.title}
       </h1>
       <p
-        class="text-left md:text-center italic text-md-muted text-xl leading-[1.55] md:max-w-2xl text-pretty"
+        class="text-left md:text-center font-accent text-md-muted text-xl leading-[1.55] md:max-w-2xl text-pretty"
       >
         {post.data.subtitle}
       </p>
@@ -67,14 +67,14 @@ const sortedPosts = posts
   </header>
   <hr class="w-32 h-px border-md-separator mx-auto pb-12" />
   <article
-    class="w-full text-lg leading-[1.55] [&>p]:pb-10 md:text-justify [&>h2]:text-xl [&>h2]:font-bold [&>h2]:font-serif [&>h2]:pt-8 [&>h2]:pb-8 md:[&>h2]:text-center md:[&>h2]:text-pretty md:[&>h2]:max-w-2xl md:[&>h2]:mx-auto"
+    class="w-full text-lg leading-[1.55] [&>p]:pb-10 md:text-justify [&>h2]:text-xl [&>h2]:font-bold [&>h2]:font-accent [&>h2]:pt-8 [&>h2]:pb-8 md:[&>h2]:text-center md:[&>h2]:text-pretty md:[&>h2]:max-w-2xl md:[&>h2]:mx-auto"
   >
     <Content />
   </article>
   {
     sortedPosts.length > 0 && (
       <section class="w-full pt-12">
-        <h3 class="font-serif text-md-muted uppercase pb-1.5">Read also</h3>
+        <h3 class="font-accent text-md-muted uppercase pb-1.5">Read also</h3>
         <ul class="w-full py-3 ps-3 md:ps-6 flex flex-col gap-4 border-s-1 border-md-separator">
           {sortedPosts.map((post) => (
             <li>
