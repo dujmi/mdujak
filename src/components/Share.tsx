@@ -19,7 +19,7 @@ export default function Share() {
       .writeText(url)
       .then(() => {
         toast.custom(() => (
-          <p className="px-5 py-4 bg-white border-1 rounded-md border-md-separator font-sans text-sm shadow-md">
+          <p className="px-5 py-4 bg-white border-1 rounded-md border-md-separator font-text text-sm shadow-md">
             The link has been copied to your clipboard.
           </p>
         ));
@@ -27,7 +27,7 @@ export default function Share() {
       .catch((err) => {
         console.error("Failed to copy URL: ", err);
         toast.custom(() => (
-          <p className="px-5 py-4 bg-white border-1 rounded-md border-md-separator font-serif text-sm shadow-md">
+          <p className="px-5 py-4 bg-white border-1 rounded-md border-md-separator font-text text-sm shadow-md">
             Failed to copy the link. Please try again.
           </p>
         ));
