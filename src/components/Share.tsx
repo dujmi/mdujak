@@ -115,7 +115,9 @@ export default function Share() {
           <DropdownMenuSeparator />
 
           <DropdownMenuItem>
-            <button onClick={copyUrl}>Copy link</button>
+            <button onClick={copyUrl} className="cursor-pointer">
+              Copy link
+            </button>
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
