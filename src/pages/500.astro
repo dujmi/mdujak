@@ -1,0 +1,20 @@
+---
+import Nav from '@/components/Nav.astro';
+import Layout from '@/layouts/Layout.astro';
+
+interface Props {
+  error: unknown;
+}
+
+const { error } = Astro.props;
+---
+
+<Layout title="500: Internal Server Error">
+  <Nav />
+  <h1
+    class="text-5xl font-bold font-serif leading-[1.1] text-left md:text-center text-balance"
+  >
+    {error instanceof Error ? error.message : "Unknown error"}
+  </h1>
+</Layout>
+
