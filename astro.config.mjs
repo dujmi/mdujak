@@ -12,7 +12,10 @@ import react from "@astrojs/react";
 export default defineConfig({
   site: "https://mdujak.vercel.app",
   output: "static",
-  prefetch: true,
+  prefetch: {
+    defaultStrategy: "hover",
+    prefetchAll: true,
+  },
   vite: {
     // @ts-ignore
     plugins: [tailwindcss()],
