@@ -122,3 +122,30 @@ const sortedPosts = posts
     }
   }
 </style>
+
+<script is:inline type="module">
+  window.addEventListener("DOMContentLoaded", () => {
+    const container = document.querySelector(".markdown-text-wrapper");
+    if (!(container instanceof HTMLElement)) return;
+
+    const links = container.querySelectorAll("a[href]");
+    links.forEach((link) => {
+      if (!(link instanceof HTMLAnchorElement)) return;
+
+      const href = link.getAttribute("href");
+      if (!href || !href.startsWith("http")) return;
+
+      try {
+        const linkHost = new URL(href).hostname;
+        const currentHost = window.location.hostname;
+
+        if (linkHost !== currentHost) {
+          link.target = "_blank";
+          link.rel = "noopener noreferrer";
+        }
+      } catch (err) {
+        console.error(`Invalid external link: ${href}`, err);
+      }
+    });
+  });
+</script>
