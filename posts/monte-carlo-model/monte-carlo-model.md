@@ -16,6 +16,8 @@ Moyesova inicijalna ideja svodila se na to da bude koliko-toliko  proaktivan. Bi
 
 Everton je do 20. minute imao 14 pritisaka na vratara i zadnju liniju suparnika, a do kraja utakmice samo 12. Moyes je svoju prednju liniju  naprosto usmjerio tako da blokira linije dodavanja između Liverpoolove  zadnje linije i Ryana Gravenbercha, a Alexisa Mac Allistera je branio tako što je na njega zalijepio ‘flaster’. Takav pristup doveo je do toga da je Liverpool imao ozbiljnih problema u dolasku prema  naprijed, barem u volumenu na koji je Slot u svom mandatu navikao.
 
+![Haaland](./haaland.jpg)
+
 Odlična ilustracija toga je to što je Virgil van Dijk imao 107 dodavanja i bio najkorišteniji Liverpoolov igrač. Iza njega je bio Ibrahima Konaté, pa Andy Robertson, pa Bradley. Za usporedbu, Gravenberch je imao 20 točnih dodavanja na  utakmici, što je puno manje od njegovih standardnih 49,2. Stoji i to da  je Slot izvadio Gravenbercha u 61. minuti, ali tada je izašao i Bradley, pa je svejedno imao gotovo dvostruko više pasova.
 
 Everton je svojim pasivnim postavljanjem i fokusom na blokiranje  linija dodavanja prema Gravenberchu naprosto prisilio Liverpool da kruži loptom u zadnjoj liniji i traži priliku za izlazak iz svoje polovice, a time je, ironično, više ograničio suparnika nego kad ga je agresivno  napadao.
