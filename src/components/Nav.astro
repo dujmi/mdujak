@@ -1,8 +1,8 @@
 ---
 import { Image } from "astro:assets";
 
-import Favicon from "../assets/favicon.jpg";
-import Share from "@/components/Share.tsx";
+import ProfilePicture from "../../public/pfp.jpeg";
+import CopyLink from "@/components/Link.tsx";
 
 const { subtitle = "STUDENT @CROATIA" } = Astro.props;
 ---
@@ -17,7 +17,7 @@ const { subtitle = "STUDENT @CROATIA" } = Astro.props;
       data-astro-prefetch="load"
     >
       <Image
-        src={Favicon}
+        src={ProfilePicture}
         alt="Mislav Dujak"
         loading="eager"
         class="rounded-full w-16 h-16"
@@ -28,5 +28,5 @@ const { subtitle = "STUDENT @CROATIA" } = Astro.props;
       <p class="font-accent text-md-muted leading-none uppercase">{subtitle}</p>
     </hgroup>
   </div>
-  <Share client:load />
+  <CopyLink client:load />
 </nav>
