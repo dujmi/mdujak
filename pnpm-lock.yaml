@@ -14,9 +14,6 @@ dependencies:
   '@astrojs/vercel':
     specifier: ^8.1.4
     version: 8.1.4(astro@5.3.0)(react@19.1.0)
-  '@radix-ui/react-dropdown-menu':
-    specifier: ^2.1.15
-    version: 2.1.15(@types/react-dom@19.1.6)(@types/react@19.1.8)(react-dom@19.1.0)(react@19.1.0)
   '@tailwindcss/vite':
     specifier: ^4.0.8
     version: 4.0.8(vite@6.3.5)
@@ -35,9 +32,6 @@ dependencies:
   clsx:
     specifier: ^2.1.1
     version: 2.1.1
-  lucide-react:
-    specifier: ^0.515.0
-    version: 0.515.0(react@19.1.0)
   react:
     specifier: ^19.1.0
     version: 19.1.0

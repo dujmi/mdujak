@@ -25,8 +25,11 @@ export default function CopyLink() {
 
   return (
     <>
-      <Toaster offset={{ bottom: "10vh", right: "10vh" }} />
-      <button onClick={getUrl} className="p-3.5 border-md-separator border-1 rounded-full text-md-fg hover:border-md-fg hover:bg-md-fg hover:text-md-bg hover:cursor-pointer transition-colors duration-100 ease-in">
+      <Toaster offset={{ bottom: "8vh", right: "8vh" }} />
+      <button
+        onClick={getUrl}
+        className="p-3.5 border-md-separator border-1 rounded-full text-md-fg hover:border-md-fg hover:bg-md-fg hover:text-md-bg hover:cursor-pointer transition-colors duration-100 ease-in"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
